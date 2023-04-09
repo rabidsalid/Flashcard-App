@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+import Flashcard from './Flashcard';
 import './App.css';
+import FlashcardList from './FlashcardList';
+import React, {useState} from 'react';
 
 function App() {
+  const [flashcards, setFlashcards] = useState(SAMPLE_FLASHCARDS)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <FlashcardList flashcards={flashcards}></FlashcardList>
     </div>
   );
 }
 
+const SAMPLE_FLASHCARDS = [
+  {
+    id: 1,
+    question: 'What is the capital of France?',
+    answer: 'Paris'
+  },
+  {
+    id: 2,
+    question: 'Who is CEO of Tesla?',
+    answer: 'Elon Musk'
+  }
+]
 export default App;

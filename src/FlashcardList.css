@@ -1,0 +1,11 @@
+body {
+    padding-top: 2%;
+    padding-left: 2%;
+}
+
+.flashcardList {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2%;
+    row-gap: 2%;
+}
