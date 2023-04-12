@@ -1,0 +1,22 @@
+.SetTerm {
+    column-gap: 2%;
+    border-width: 2px;
+    border-radius: 7px;
+    border-color: gainsboro;
+    height: 8vh;
+    background-color: #ffffff;
+    margin-bottom: 1%;
+}
+.SetTermChild {
+    margin-left: 2%;
+    align-items: center;
+    justify-content: center;
+}
+.SetTermChildRight {
+    align-items: center;
+    justify-content: center;
+}
+
+.vl {
+    border-right: 2px solid rgba(211, 211, 211, 0.5);
+}
