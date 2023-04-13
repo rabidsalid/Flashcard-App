@@ -6,3 +6,13 @@ body {
     margin-top: 4vh;
     margin-right: 5vh;
 }
+
+.SetTermListHeader {
+    margin-bottom: 2%;
+}
+
+.flashcardDiv {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}

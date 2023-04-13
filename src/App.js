@@ -6,10 +6,14 @@ import SetTermHolder from './SetTermHolder';
 
 function App() {
   const [flashcards, setFlashcards] = useState(SAMPLE_FLASHCARDS)
+  let currentCard = 0;
   return (
     <div>
-      <FlashcardList flashcards={flashcards}></FlashcardList>
+      <div class='flashcardDiv'>
+        <Flashcard question={flashcards[currentCard].question} answer={flashcards[currentCard].answer}></Flashcard>
+      </div>
       <div className='SetTermList w-75 mx-auto'>
+      <h4 class='SetTermListHeader'>Terms in this set</h4>
         {flashcards.map((term) => {
           return <SetTermHolder term={term} key={term.id} />
         })}

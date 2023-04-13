@@ -20,3 +20,16 @@
 .vl {
     border-right: 2px solid rgba(211, 211, 211, 0.5);
 }
+
+.buttonDiv {
+    display: flex;
+    column-gap: 12%;
+    justify-content: right;
+    justify-items: right;
+    margin-right: 2%;
+}
+
+.buttons {
+    scale: 120%;
+    color: rgba(95, 95, 95, 0.822);
+}

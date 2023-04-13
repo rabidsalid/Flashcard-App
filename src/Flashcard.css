@@ -4,11 +4,11 @@
     justify-content: center;
     position: relative;
     padding: 2%;
-    border-radius: .25rem;
+    border-radius: .35rem;
     box-shadow: 0 0 5px 2px rgb(0, 0, 0, 0.3);
-    width: 40vh;
-    height: 12vh;
-    background-color: lightgray;
+    width: 80vh;
+    height: 45vh;
+    background-color: white;
     transform-style: preserve-3d;
     transition: 150ms;
     transform: perspective(1000px) rotateY(var(--rotate-y, 0));
