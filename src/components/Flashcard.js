@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './Flashcard.css';
+import '../styles/Flashcard.css';
 
 export default function Flashcard({ question, answer }) {
   const [flip, setFlip] = useState(false);
@@ -10,3 +10,5 @@ export default function Flashcard({ question, answer }) {
     </div>
   );
 }
+
+

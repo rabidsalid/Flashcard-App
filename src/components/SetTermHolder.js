@@ -1,5 +1,5 @@
 import React from "react";
-import './SetTermHolder.css'
+import '../styles/SetTermHolder.css'
 import { FaPen, FaVolumeUp, FaStar } from "react-icons/fa";
 
 export default function SetTermHolder({ term }) {

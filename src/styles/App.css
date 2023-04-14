@@ -10,16 +10,13 @@ body {
     margin-right: 5vh;
 }
 
-.SetTermListHeader {
-    margin-bottom: 2%;
-    font-weight: bold;
-}
 
 .flashcardDiv {
     display: flex;
     justify-content: center;
     justify-items: center;
     margin-bottom: 20px;
+    margin-top: 2%;
 }
 
 .flashcardButtons {
@@ -44,3 +41,14 @@ body {
     color: rgba(78, 77, 77, 0.959);
     line-height: 90%;
 }
+
+.SetTermListHeader {
+    margin-bottom: 2%;
+    font-weight: bold;
+}
+
+.SetTermListEdit {
+    margin-right: 2%;
+    zoom: 90%;
+}
+
