@@ -3,21 +3,38 @@ import './App.css';
 import FlashcardList from './FlashcardList';
 import React, {useState} from 'react';
 import SetTermHolder from './SetTermHolder';
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 function App() {
   const [flashcards, setFlashcards] = useState(SAMPLE_FLASHCARDS)
-  let currentCard = 0;
+  const [currentCard, setCurrentCard] = useState(0)
+
+  const prevCard =  () => {
+    if (currentCard > 0) {
+      setCurrentCard(currentCard - 1);
+    }
+  }
+
+  const nextCard = () => {
+    if (currentCard < flashcards.length - 1) {
+      setCurrentCard(currentCard + 1);
+    }
+  }
+
   return (
     <div>
       <div class='flashcardDiv'>
         <Flashcard question={flashcards[currentCard].question} answer={flashcards[currentCard].answer}></Flashcard>
       </div>
-      <div className='SetTermList w-75 mx-auto'>
-      <h4 class='SetTermListHeader'>Terms in this set</h4>
-        {flashcards.map((term) => {
-          return <SetTermHolder term={term} key={term.id} />
-        })}
+      <div className='flashcardButtons justify-content-center'>
+        <FaArrowLeft className='buttons' onClick={prevCard}/><p className='cardNum'>{currentCard + 1}/{flashcards.length}</p><FaArrowRight className='buttons' onClick={nextCard}/>
       </div>
+      <div className='SetTermList w-75 mx-auto'>
+        <h4 class='SetTermListHeader'>Terms in this set ({flashcards.length})</h4>
+          {flashcards.map((term) => {
+            return <SetTermHolder term={term} key={term.id} />
+          })}
+        </div>
     </div>
   );
 }

@@ -33,3 +33,9 @@
     scale: 120%;
     color: rgba(95, 95, 95, 0.822);
 }
+
+.buttons:hover {
+    transition: 0.25s;
+    color: rgb(95, 95, 95);
+    cursor: pointer;
+}

@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Oswald&family=Poppins:wght@300&display=swap');
+
 body {
+    font-family: 'Poppins', sans-serif;
     background-color: black;
 }
 
@@ -9,10 +12,35 @@ body {
 
 .SetTermListHeader {
     margin-bottom: 2%;
+    font-weight: bold;
 }
 
 .flashcardDiv {
     display: flex;
     justify-content: center;
     justify-items: center;
+    margin-bottom: 20px;
+}
+
+.flashcardButtons {
+    display: flex;
+    zoom: 120%;
+}
+
+.buttons {
+    color: rgba(95, 95, 95, 0.822);
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.buttons:hover {
+    transition: 0.25s;
+    color: rgb(95, 95, 95);
+    cursor: pointer;
+}
+
+.cardNum {
+    font-weight: bold;
+    color: rgba(78, 77, 77, 0.959);
+    line-height: 90%;
 }
