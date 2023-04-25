@@ -1,0 +1,59 @@
+.EditingSetTerm {
+    column-gap: 2%;
+    border-width: 2px;
+    border-radius: 7px;
+    border-color: gainsboro;
+    height: 12vh;
+    background-color: #ffffff;
+    margin-bottom: 1%;
+}
+.SetTermChild {
+    margin-left: 2%;
+    align-items: center;
+    justify-content: center;
+    border-color: transparent;
+}
+.SetTermChildRight {
+    align-items: center;
+    justify-content: center;
+    margin-right: 2%;
+}
+
+.vl {
+    border-right: 2px solid rgba(211, 211, 211, 0.5);
+}
+
+.buttonDiv {
+    display: flex;
+    column-gap: 12%;
+    justify-content: right;
+    justify-items: right;
+    margin-right: 2%;
+}
+
+.buttons {
+    scale: 120%;
+    color: rgba(95, 95, 95, 0.822);
+}
+
+.buttons:hover {
+    transition: 0.25s;
+    color: rgb(95, 95, 95);
+    cursor: pointer;
+}
+
+.inputfield {
+    border-style: none;
+    width: 100%;
+    margin-right: 2%;
+}
+
+.inputfield:focus {
+    outline-width: 0;
+}
+
+.horLine {
+    margin-top: 0%;
+    margin-bottom: 0%;
+    border: solid black 1.5px;
+}

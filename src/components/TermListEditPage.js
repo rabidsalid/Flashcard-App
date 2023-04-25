@@ -1,26 +1,17 @@
 import {React, useState} from 'react';
-import SetTermHolder from './SetTermHolder';
+import EditingSetTermHolder from './EditingSetTermHolder';
+import '../styles/TermListEditPage.css';
 
-export default function TermListEditPage() {
-    const [flashcards, setFlashcards] = useState(SAMPLE_FLASHCARDS)
+export default function TermListEditPage(props) {
+
     return (
         <div className='SetTermList w-75 mx-auto'>
-            {flashcards.map((term) => {
-                return <SetTermHolder term={term} key={term.id} />
+            {props.flashcards.map((term) => {
+                return <EditingSetTermHolder term={term} key={term.id} />
             })}
-      </div>
+            <div className='d-flex justify-content-center done-btn-div'>
+                <button type="button" className='btn btn-primary done-btn'>Done</button>
+            </div>
+        </div>
     )
 }
-
-const SAMPLE_FLASHCARDS = [
-    {
-      id: 1,
-      question: 'What is the capital of France?',
-      answer: 'Paris'
-    },
-    {
-      id: 2,
-      question: 'Who is CEO of Tesla?',
-      answer: 'Elon Musk'
-    }
-  ]
