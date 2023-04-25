@@ -31,16 +31,6 @@ function App() {
 
     getCards();
   }, []);
-  // function callAPI() {
-  //   console.log("api call")
-  //   const x = fetch("http://localhost:8080/getcards")
-  //   .then(res => res.text())
-  //   .then(y => console.log(y))
-  // }
-
-  // useEffect(() => {
-  //   callAPI();
-  // }, [])
 
   return (
     <Router>

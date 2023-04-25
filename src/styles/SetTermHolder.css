@@ -17,6 +17,10 @@
     justify-content: center;
 }
 
+.SetTermList {
+    margin-bottom: 3%;
+}
+
 .vl {
     border-right: 2px solid rgba(211, 211, 211, 0.5);
 }
