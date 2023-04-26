@@ -1,4 +1,5 @@
 import {React, useRef} from 'react';
+import { FaXMark } from "react-icons/fa";
 import '../styles/EditingSetTermHolder.css';
 
 export default function EditingSetTermHolder(props) {

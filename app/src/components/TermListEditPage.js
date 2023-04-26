@@ -10,7 +10,7 @@ export default function TermListEditPage(props) {
                 return <EditingSetTermHolder term={term} key={term.id} />
             })}
             <div className='d-flex justify-content-center done-btn-div'>
-                <button type="button" className='btn btn-primary done-btn'>Done</button>
+                <a type="button" className='btn btn-primary done-btn' href='/'>Done</a>
             </div>
         </div>
     )
