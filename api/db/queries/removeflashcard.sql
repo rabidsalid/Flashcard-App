@@ -1,0 +1,1 @@
+DELETE FROM flashcards WHERE id = ?;
