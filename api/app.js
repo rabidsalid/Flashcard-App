@@ -14,7 +14,7 @@ app.use(cors());
 const get_flashcards_sql = fs.readFileSync(__dirname + "/db/queries/readallfromtable.sql", { encoding: "UTF-8" })
 
 app.get('/', (req, res) => {
-  res.send('It works!');
+  res.send('API running');
 });
 
 app.get('/getcards', (req, res) => {

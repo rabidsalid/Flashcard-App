@@ -44,12 +44,12 @@ export default function EditingSetTermHolder(props) {
   return (
     <div className='row shadow-sm align-items-center EditingSetTerm'>
       <div className='col SetTermChild'>
-          <input className='inputfield shadow-none' defaultValue={props.term.question} ref={questionRef} onBlur={onUnfocus}/>
+          <input className='inputfield shadow-none' defaultValue={props.term.question} placeholder='Enter your question' ref={questionRef} onBlur={onUnfocus}/>
           <hr className='horLine'></hr>
       </div>
 
       <div className='col SetTermChildRight'>
-          <input className='inputfield shadow-none' defaultValue={props.term.answer} ref={answerRef} onBlur={onUnfocus}/>
+          <input className='inputfield shadow-none' defaultValue={props.term.answer} placeholder='Enter your answer' ref={answerRef} onBlur={onUnfocus}/>
           <hr className='horLine'></hr>
       </div>
       <div className='deleteButtonDiv'>
