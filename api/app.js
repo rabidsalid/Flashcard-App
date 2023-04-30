@@ -24,11 +24,20 @@ app.get('/getcards', (req, res) => {
   });
 });
 
-const modify_flashcards_sql = fs.readFileSync(__dirname + "/db/queries/modifyflashcard.sql", { encoding: "UTF-8" })
+const modify_flashcard_sql = fs.readFileSync(__dirname + "/db/queries/modifyflashcard.sql", { encoding: "UTF-8" })
 
 app.post('/modifycard', (req, res) => {
-  console.log(req.body);
-  db.execute(modify_flashcards_sql, [req.body.question, req.body.answer, req.body.id], (error, results) => {
+  console.log("Modify Card Request: " + req.body);
+  db.execute(modify_flashcard_sql, [req.body.question, req.body.answer, req.body.id], (error, results) => {
+    if (error) throw error;
+  })
+});
+
+const remove_flashcard_sql = fs.readFileSync(__dirname + "/db/queries/removeflashcard.sql", { encoding: "UTF-8" })
+
+app.post('/removecard', (req, res) => {
+  console.log("Remove Card Request With ID: " + req.body.id);
+  db.execute(remove_flashcard_sql, [req.body.id], (error, results) => {
     if (error) throw error;
   })
 });

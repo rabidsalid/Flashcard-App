@@ -6,6 +6,7 @@
     height: 12vh;
     background-color: #ffffff;
     margin-bottom: 1%;
+    position: relative;
 }
 .SetTermChild {
     margin-left: 2%;
@@ -56,4 +57,14 @@
     margin-top: 0%;
     margin-bottom: 0%;
     border: solid black 1.5px;
+}
+
+.deleteButtonDiv {
+    display: inline-flex;
+    justify-content: right;
+    color: rgba(95, 95, 95, 0.822);
+    position: absolute;
+    top: 10px;
+    right: 0;
+    zoom: 120%;
 }

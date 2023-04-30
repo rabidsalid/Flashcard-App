@@ -32,11 +32,26 @@ function App() {
     getCards();
   }, []);
 
+  function addFlashcardLive() {
+    setFlashcards([...flashcards, {
+      id: flashcards[flashcards.length-1].id + 1,
+      question: '',
+      answer: '',
+      userid: 'null'
+    }]);
+    console.log("added card")
+  }
+
+  function removeFlashcardLive(id) {
+    setFlashcards(flashcards.filter(flashcard => flashcard.id !== id));
+    console.log("removed card")
+  }
+
   return (
     <Router>
       <Routes>
         <Route exact path='/' element={<FlashcardPage flashcards={flashcards}/>} />
-        <Route path='/edit' element={<TermlistEditPage flashcards={flashcards}/>} />
+        <Route path='/edit' element={<TermlistEditPage flashcards={flashcards} removeFlashcardLive={removeFlashcardLive} addFlashcardLive={addFlashcardLive}/>} />
       </Routes>
     </Router>
   );

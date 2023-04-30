@@ -4,4 +4,12 @@
 
 .done-btn {
     scale: 120%;
+
 }
+
+.addcard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
