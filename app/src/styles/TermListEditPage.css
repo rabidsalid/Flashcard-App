@@ -11,5 +11,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #ffffff;
+    border-width: 2px;
+    border-radius: 7px;
+    zoom: 105%;
 }
 
+.addcardtext {
+    margin-top: 1.2%;
+    margin-left: 0.3%;
+}
+
+.addcardbutton:hover {
+    transition: 0.25s;
+    color: rgb(92, 91, 91);
+    cursor: pointer;
+}
