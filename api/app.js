@@ -42,6 +42,16 @@ app.post('/removecard', (req, res) => {
   })
 });
 
+const add_flashcard_sql = fs.readFileSync(__dirname + "/db/queries/addflashcard.sql", { encoding: "UTF-8" })
+
+app.post('/addcard', (req, res) => {
+  console.log("Add Card Request");
+  db.execute(add_flashcard_sql, [req.body.id, req.body.question, req.body.answer], (error, results) => {
+    if (error) throw error;
+    res.json(results)
+  })
+});
+
 app.listen( port, () => {
   console.log(`App server listening on ${ port }. (Go to http://localhost:${ port })` );
 } );

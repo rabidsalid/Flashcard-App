@@ -1,4 +1,4 @@
-import {React, useState} from 'react';
+import {React} from 'react';
 import { FaPlus } from "react-icons/fa";
 import EditingSetTermHolder from './EditingSetTermHolder';
 import '../styles/TermListEditPage.css';
@@ -6,7 +6,7 @@ import '../styles/TermListEditPage.css';
 export default function TermListEditPage(props) {
 
     function addCard() {
-        props.addFlashcardLive();
+        props.addFlashcard();
     }
 
     return (

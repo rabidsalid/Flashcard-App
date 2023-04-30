@@ -32,13 +32,27 @@ function App() {
     getCards();
   }, []);
 
-  function addFlashcardLive() {
+  function addFlashcard() {
+    let data = fetch('http://localhost:8080/addcard', {
+      method: 'POST',
+      mode: 'cors',
+      body: JSON.stringify({
+        'id': flashcards[flashcards.length-1].id + 1,
+        'question': '',
+        'answer':''
+      }),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      }
+      })
+    console.log(data)
     setFlashcards([...flashcards, {
       id: flashcards[flashcards.length-1].id + 1,
       question: '',
       answer: '',
       userid: 'null'
     }]);
+
     console.log("added card")
   }
 
@@ -51,7 +65,7 @@ function App() {
     <Router>
       <Routes>
         <Route exact path='/' element={<FlashcardPage flashcards={flashcards}/>} />
-        <Route path='/edit' element={<TermlistEditPage flashcards={flashcards} removeFlashcardLive={removeFlashcardLive} addFlashcardLive={addFlashcardLive}/>} />
+        <Route path='/edit' element={<TermlistEditPage flashcards={flashcards} removeFlashcardLive={removeFlashcardLive} addFlashcard={addFlashcard}/>} />
       </Routes>
     </Router>
   );

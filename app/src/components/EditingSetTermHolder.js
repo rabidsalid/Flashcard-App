@@ -59,5 +59,3 @@ export default function EditingSetTermHolder(props) {
     </div>
   )
 }
-
-  // onChange={props.setFlashcard(term.id, this)}
